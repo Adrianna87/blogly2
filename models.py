@@ -14,16 +14,11 @@ class User(db.Model):
 
     @property
     def full_name(self):
-        """Return full name of user."""
 
         return f"{self.first_name} {self.last_name}"
 
 
 def connect_db(app):
-    """Connect this database to provided Flask app.
-
-    You should call this in your Flask app.
-    """
 
     db.app = app
     db.init_app(app)
